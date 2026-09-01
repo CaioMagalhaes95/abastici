@@ -1,13 +1,12 @@
 # Registrador de Abastecimentos
-
-Um webapp completo para registrar e acompanhar abastecimentos com data, tipo de combustível e valor gasto.
+Protótipo para arquetipar de maneira sigilosa um projeto futuro.
+Estudo de linguagem
 
 ## Tecnologias Utilizadas
 
 ### Backend
 - **Node.js** com Express.js
-- **MongoDB** para persistência de dados
-- **Mongoose** para modelagem de dados
+- **PostGre** com Sequelize
 
 ### Frontend
 - **React** com Hooks
@@ -40,16 +39,8 @@ Um webapp completo para registrar e acompanhar abastecimentos com data, tipo de 
 
 ## Instalação e Execução
 
-### 1. Instalar MongoDB
+### 1. Instalar PostGre pgAdmin
 
-**Windows:**
-- Baixe em: https://www.mongodb.com/try/download/community
-- Instale o MongoDB Community Edition
-- Certifique-se de que o serviço está rodando
-
-**Alternativa (MongoDB Atlas - Cloud):**
-- Crie uma conta em: https://www.mongodb.com/cloud/atlas
-- Substitua `MONGODB_URI` no `.env` pela sua connection string
 
 ### 2. Instalar dependências do Backend
 
@@ -130,20 +121,6 @@ curl -X POST http://localhost:5000/api/abastecimentos \
   }'
 ```
 
-## Variáveis de Ambiente (.env)
-
-```
-MONGODB_URI=mongodb://localhost:27017/fuel-registration
-PORT=5000
-NODE_ENV=development
-```
-
-## Troubleshooting
-
-**Erro: "Cannot connect to MongoDB"**
-- Verifique se o MongoDB está rodando
-- Verifique a `MONGODB_URI` no `.env`
-
 **Erro: CORS error no frontend**
 - Certifique-se de que o backend está rodando em `http://localhost:5000`
 - Verifique se o proxy no `frontend/package.json` está correto
@@ -152,4 +129,4 @@ NODE_ENV=development
 - Mude a PORT no `.env` (ex: 5001)
 - Para o frontend, execute: `PORT=3001 npm start`
 
-## Desenvolvido com ❤️
+
